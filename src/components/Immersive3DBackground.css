@@ -1,0 +1,516 @@
+/* ==========================================
+   IMMERSIVE 3D BACKGROUND
+   ========================================== */
+
+.immersive-3d-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-background);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ==========================================
+   ATMOSPHERIC LAYERS
+   ========================================== */
+
+.atmosphere-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  animation: atmosphereShift 30s ease-in-out infinite;
+}
+
+.layer-1 {
+  background: radial-gradient(circle at 20% 30%, var(--color-electric-blue) 0%, transparent 50%);
+  animation-delay: 0s;
+}
+
+.layer-2 {
+  background: radial-gradient(circle at 80% 60%, var(--color-magenta) 0%, transparent 50%);
+  animation-delay: 10s;
+}
+
+.layer-3 {
+  background: radial-gradient(circle at 50% 80%, var(--color-cyan) 0%, transparent 50%);
+  animation-delay: 20s;
+}
+
+@keyframes atmosphereShift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* ==========================================
+   GIANT LIQUID GRADIENT BLOBS
+   ========================================== */
+
+.liquid-blob {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: blobMorph 25s ease-in-out infinite, blobFloat 20s ease-in-out infinite;
+}
+
+.blob-cosmic {
+  width: 600px;
+  height: 600px;
+  background: var(--gradient-cosmic);
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.blob-ocean {
+  width: 700px;
+  height: 700px;
+  background: var(--gradient-ocean);
+  top: 20%;
+  right: -150px;
+  animation-delay: 3s;
+}
+
+.blob-sunset {
+  width: 550px;
+  height: 550px;
+  background: var(--gradient-sunset);
+  bottom: -100px;
+  left: 15%;
+  animation-delay: 6s;
+}
+
+.blob-aurora {
+  width: 650px;
+  height: 650px;
+  background: var(--gradient-aurora);
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 9s;
+}
+
+.blob-fire {
+  width: 500px;
+  height: 500px;
+  background: var(--gradient-fire);
+  top: 40%;
+  left: 35%;
+  animation-delay: 12s;
+  opacity: 0.3;
+}
+
+@keyframes blobMorph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  25% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  75% {
+    border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%;
+  }
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translate(50px, -40px) scale(1.1) rotate(5deg);
+  }
+  66% {
+    transform: translate(-40px, 50px) scale(0.95) rotate(-5deg);
+  }
+}
+
+/* ==========================================
+   FLOATING GEOMETRIC SHAPES
+   ========================================== */
+
+.geometric-shape {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  animation: geometricFloat 18s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.shape-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-glass);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-3d-lg), inset 0 0 30px rgba(255, 255, 255, 0.2);
+  animation: shapeRotate 12s linear infinite;
+}
+
+.shape-1 {
+  top: 10%;
+  left: 25%;
+  animation-delay: 0s;
+}
+
+.shape-1 .shape-inner {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(212, 70, 239, 0.2));
+}
+
+.shape-2 {
+  top: 60%;
+  right: 20%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 3s;
+}
+
+.shape-2 .shape-inner {
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(6, 214, 249, 0.2), rgba(20, 184, 166, 0.2));
+}
+
+.shape-3 {
+  bottom: 25%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 6s;
+}
+
+.shape-3 .shape-inner {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background: linear-gradient(135deg, rgba(255, 140, 66, 0.2), rgba(255, 0, 128, 0.2));
+}
+
+.shape-4 {
+  top: 35%;
+  left: 5%;
+  width: 130px;
+  height: 130px;
+  animation-delay: 9s;
+}
+
+.shape-4 .shape-inner {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(0, 102, 255, 0.2));
+}
+
+@keyframes geometricFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+  }
+}
+
+@keyframes shapeRotate {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+/* ==========================================
+   GLOSSY GRADIENT SPHERES
+   ========================================== */
+
+.gradient-sphere {
+  position: absolute;
+  border-radius: 50%;
+  animation: sphereFloat 15s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+.sphere-1 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), var(--color-hot-pink) 50%, var(--color-magenta));
+  top: 20%;
+  right: 30%;
+  box-shadow: var(--shadow-glow-pink);
+  animation-delay: 0s;
+}
+
+.sphere-2 {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), var(--color-electric-blue) 50%, var(--color-vibrant-violet));
+  bottom: 30%;
+  left: 25%;
+  box-shadow: var(--shadow-glow-blue);
+  animation-delay: 3s;
+}
+
+.sphere-3 {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), var(--color-cyan) 50%, var(--color-turquoise));
+  top: 50%;
+  left: 10%;
+  box-shadow: var(--shadow-glow-cyan);
+  animation-delay: 6s;
+}
+
+.sphere-4 {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), var(--color-sunset-orange) 50%, var(--color-coral));
+  top: 70%;
+  right: 15%;
+  animation-delay: 9s;
+}
+
+.sphere-5 {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), var(--color-golden-yellow) 50%, var(--color-sunset-orange));
+  top: 10%;
+  left: 40%;
+  animation-delay: 12s;
+}
+
+@keyframes sphereFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-50px) scale(1.1);
+  }
+}
+
+/* ==========================================
+   FLOATING PARTICLES
+   ========================================== */
+
+.particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), var(--color-cyan) 70%);
+  filter: blur(1px);
+  animation: particleFloat 20s ease-in-out infinite;
+  opacity: 0.6;
+  box-shadow: 0 0 10px rgba(6, 214, 249, 0.6);
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   LIGHT RAYS
+   ========================================== */
+
+.light-rays {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+
+.light-ray {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, var(--color-cyan) 50%, transparent 100%);
+  filter: blur(2px);
+  animation: rayMove 15s ease-in-out infinite;
+}
+
+.ray-1 {
+  left: 20%;
+  animation-delay: 0s;
+  background: linear-gradient(180deg, transparent 0%, var(--color-electric-blue) 50%, transparent 100%);
+}
+
+.ray-2 {
+  left: 50%;
+  animation-delay: 5s;
+  background: linear-gradient(180deg, transparent 0%, var(--color-magenta) 50%, transparent 100%);
+}
+
+.ray-3 {
+  left: 75%;
+  animation-delay: 10s;
+  background: linear-gradient(180deg, transparent 0%, var(--color-cyan) 50%, transparent 100%);
+}
+
+@keyframes rayMove {
+  0%, 100% {
+    transform: translateX(0) scaleY(0.8);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateX(20px) scaleY(1.2);
+    opacity: 0.2;
+  }
+}
+
+/* ==========================================
+   ANIMATED GRADIENT RINGS
+   ========================================== */
+
+.gradient-rings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.animated-ring {
+  animation: ringPulse 8s ease-in-out infinite;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: ringDraw 10s ease-in-out infinite;
+}
+
+.ring-1 {
+  animation-delay: 0s;
+}
+
+.ring-2 {
+  animation-delay: 5s;
+}
+
+@keyframes ringDraw {
+  0%, 100% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 0.6;
+  }
+}
+
+@keyframes ringPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .liquid-blob {
+    filter: blur(60px);
+  }
+  
+  .blob-cosmic,
+  .blob-ocean,
+  .blob-sunset,
+  .blob-aurora,
+  .blob-fire {
+    width: 400px;
+    height: 400px;
+  }
+
+  .geometric-shape {
+    width: 100px;
+    height: 100px;
+  }
+
+  .gradient-sphere {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .liquid-blob {
+    filter: blur(50px);
+    opacity: 0.4;
+  }
+
+  .blob-cosmic,
+  .blob-ocean,
+  .blob-sunset,
+  .blob-aurora,
+  .blob-fire {
+    width: 300px;
+    height: 300px;
+  }
+
+  .geometric-shape {
+    width: 80px;
+    height: 80px;
+  }
+
+  .gradient-sphere {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .floating-particle {
+    width: 5px;
+    height: 5px;
+  }
+
+  .light-rays {
+    opacity: 0.08;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION SUPPORT
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-blob,
+  .geometric-shape,
+  .gradient-sphere,
+  .floating-particle,
+  .light-ray,
+  .animated-ring,
+  .atmosphere-layer {
+    animation: none !important;
+  }
+
+  .liquid-blob,
+  .geometric-shape,
+  .gradient-sphere {
+    opacity: 0.3;
+  }
+}

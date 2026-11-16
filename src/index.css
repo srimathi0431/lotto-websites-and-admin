@@ -1,0 +1,993 @@
+/* ==========================================
+   LOTTO LINK - ITOM STYLE GLOBAL DESIGN SYSTEM
+   International Professional Standard
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import './styles/animations.css';
+
+:root {
+  /* ==========================================
+     BASE COLORS - ITom Style Professional
+     ========================================== */
+  
+  /* Backgrounds */
+  --bg-primary: #FAFAFA;          /* Soft off-white */
+  --bg-white: #FFFFFF;            /* Pure white cards */
+  --bg-light: #F5F5F7;            /* Light gray */
+  
+  /* Text */
+  --text-dark: #171A35;           /* Almost black */
+  --text-gray: #777B91;           /* Muted text */
+  --text-light: #A0A3B8;          /* Light gray text */
+  
+  /* Accents - Minimal, Professional */
+  --accent-blue: #3B82F6;
+  --accent-purple: #A855F7;
+  --accent-gold: #F59E0B;
+  --accent-green: #10B981;
+  --accent-pink: #EC4899;
+  
+  /* Borders & Dividers */
+  --border-color: rgba(23, 26, 53, 0.08);
+  --border-light: rgba(23, 26, 53, 0.04);
+  
+  /* Shadows - Subtle */
+  --shadow-xs: 0 1px 2px rgba(23, 26, 53, 0.02);
+  --shadow-sm: 0 2px 8px rgba(23, 26, 53, 0.04);
+  --shadow-md: 0 8px 24px rgba(23, 26, 53, 0.06);
+  --shadow-lg: 0 20px 60px rgba(23, 26, 53, 0.08);
+  --shadow-xl: 0 32px 80px rgba(23, 26, 53, 0.12);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --gradient-purple: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  
+  /* ==========================================
+     TYPOGRAPHY
+     ========================================== */
+  
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.125rem;     /* 18px */
+  --text-xl: 1.25rem;      /* 20px */
+  --text-2xl: 1.5rem;      /* 24px */
+  --text-3xl: 2rem;        /* 32px */
+  --text-4xl: 2.75rem;     /* 44px */
+  --text-5xl: 4rem;        /* 64px */
+  
+  /* ==========================================
+     SPACING SYSTEM
+     ========================================== */
+  
+  --space-xs: 0.5rem;      /* 8px */
+  --space-sm: 1rem;        /* 16px */
+  --space-md: 1.5rem;      /* 24px */
+  --space-lg: 2.5rem;      /* 40px */
+  --space-xl: 4rem;        /* 64px */
+  --space-2xl: 6rem;       /* 96px */
+  --space-3xl: 8rem;       /* 128px */
+  
+  /* ==========================================
+     BORDER RADIUS
+     ========================================== */
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+  
+  /* ==========================================
+     TRANSITIONS
+     ========================================== */
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ==========================================
+     Z-INDEX
+     ========================================== */
+  
+  --z-back: -1;
+  --z-base: 0;
+  --z-content: 1;
+  --z-float: 10;
+  --z-nav: 100;
+  --z-modal: 1000;
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-gray);
+  background: linear-gradient(
+    135deg,
+    #e0e7ff 0%,
+    #ede9fe 25%,
+    #fce7f3 50%,
+    #fef3c7 75%,
+    #e0e7ff 100%
+  );
+  background-attachment: fixed;
+  overflow-x: hidden;
+  position: relative;
+  max-width: 100vw;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+/* Hide all scrollbars globally */
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ==========================================
+   GLOBAL ANIMATED ZOOM CIRCLES BACKGROUND
+   ========================================== */
+
+.global-zoom-circles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.global-zoom-circle {
+  position: absolute;
+  transform: scale(0);
+  border-radius: 50%;
+  border: 3px solid;
+  animation: globalZoomCircle 8s ease-out infinite;
+}
+
+/* SMALL CIRCLES */
+.global-zoom-circle-1 {
+  width: 80px;
+  height: 80px;
+  top: 15%;
+  left: 10%;
+  border-color: rgba(147, 51, 234, 0.4);
+  filter: blur(1px);
+  animation-delay: 0s;
+}
+
+.global-zoom-circle-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: 15%;
+  border-color: rgba(236, 72, 153, 0.4);
+  filter: blur(1px);
+  animation-delay: 1s;
+}
+
+/* MEDIUM CIRCLES */
+.global-zoom-circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 20%;
+  border-color: rgba(59, 130, 246, 0.35);
+  filter: blur(2px);
+  animation-delay: 2s;
+}
+
+.global-zoom-circle-4 {
+  width: 130px;
+  height: 130px;
+  bottom: 35%;
+  left: 18%;
+  border-color: rgba(251, 191, 36, 0.35);
+  filter: blur(2px);
+  animation-delay: 3s;
+}
+
+/* BIG CIRCLES */
+.global-zoom-circle-5 {
+  width: 200px;
+  height: 200px;
+  top: 25%;
+  right: 8%;
+  border-color: rgba(168, 85, 247, 0.3);
+  filter: blur(3px);
+  animation-delay: 4s;
+}
+
+.global-zoom-circle-6 {
+  width: 180px;
+  height: 180px;
+  bottom: 15%;
+  left: 12%;
+  border-color: rgba(244, 114, 182, 0.3);
+  filter: blur(3px);
+  animation-delay: 5s;
+}
+
+.global-zoom-circle-7 {
+  width: 90px;
+  height: 90px;
+  top: 60%;
+  left: 25%;
+  border-color: rgba(16, 185, 129, 0.4);
+  filter: blur(1px);
+  animation-delay: 6s;
+}
+
+.global-zoom-circle-8 {
+  width: 160px;
+  height: 160px;
+  top: 70%;
+  right: 30%;
+  border-color: rgba(245, 158, 11, 0.35);
+  filter: blur(2px);
+  animation-delay: 7s;
+}
+
+@keyframes globalZoomCircle {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: -0.5px;
+}
+
+h4 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+h5 {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+h6 {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--space-sm);
+  line-height: 1.7;
+  color: var(--text-gray);
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--accent-purple);
+}
+
+strong {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ==========================================
+   BUTTONS - Professional Style
+   ========================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 1rem 2rem;
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--text-dark);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-dark);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
+}
+
+.btn-outline:hover {
+  background: var(--text-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 1.125rem 2.5rem;
+  font-size: var(--text-lg);
+}
+
+.btn-small {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--text-sm);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ==========================================
+   LAYOUT UTILITIES
+   ========================================== */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.container-narrow {
+  max-width: 960px;
+}
+
+.container-wide {
+  max-width: 1440px;
+}
+
+.section {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  z-index: 1;
+}
+
+.section-large {
+  padding: var(--space-3xl) 0;
+}
+
+/* ==========================================
+   TEXT UTILITIES
+   ========================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-small {
+  font-size: var(--text-sm);
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+/* ==========================================
+   CARD STYLES - Professional
+   ========================================== */
+
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-light);
+}
+
+.card-flat {
+  box-shadow: none;
+}
+
+.card-elevated {
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==========================================
+   REVEAL ANIMATIONS
+   ========================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity var(--transition-smooth) ease-out, 
+              transform var(--transition-smooth) ease-out;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+/* Focus Styles */
+:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Skip to Content */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--text-dark);
+  color: white;
+  border-radius: var(--radius-md);
+  z-index: var(--z-modal);
+}
+
+.skip-to-content:focus {
+  top: var(--space-sm);
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 3.5rem;
+    --space-3xl: 5rem;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .btn {
+    padding: 0.875rem 1.75rem;
+    font-size: var(--text-sm);
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-md: 1rem;
+    --space-lg: 1.25rem;
+  }
+
+  .container {
+    padding: 0 var(--space-sm);
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+
+/* ==========================================
+   GLOBAL TEXT COLOR FIX FOR LIGHT BACKGROUND
+   ========================================== */
+
+/* ALL HEADINGS - COLORFUL AND VIBRANT */
+h1, h2, h3, h4, h5, h6 {
+  color: #6366f1 !important;
+  text-shadow: 0 2px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ALL PARAGRAPHS AND TEXT */
+p, span, div, a {
+  color: #333 !important;
+}
+
+/* Hero Section */
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.hero-logo-text,
+.hero-tagline,
+.headline-line-1,
+.headline-line-2 {
+  color: #1a1a1a !important;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* How It Works */
+.hiw-title,
+.hiw-subtitle,
+.hiw-step-title,
+.hiw-step-desc,
+.hiw-gradient-text {
+  color: #1a1a1a !important;
+}
+
+.hiw-badge-text {
+  color: #7c3aed !important;
+}
+
+/* Features */
+.features-title,
+.features-subtitle,
+.features-gradient-text,
+.feature-title,
+.feature-desc {
+  color: #1a1a1a !important;
+}
+
+.features-badge-text {
+  color: #7c3aed !important;
+}
+
+/* FAQ */
+.faq h2,
+.faq p,
+.faq-question-text,
+.faq-answer-content,
+.text-gradient {
+  color: #1a1a1a !important;
+}
+
+.section-label {
+  color: white !important;
+}
+
+/* CTA - Keep white on gradient */
+.cta-content h2,
+.cta-content p,
+.cta-text h2,
+.cta-text p {
+  color: white !important;
+}
+
+/* Footer */
+.footer h3,
+.footer p,
+.footer a,
+.footer-links a,
+.footer-copyright,
+.footer-contact-item {
+  color: #333 !important;
+}
+
+.footer-links a:hover {
+  color: #7c3aed !important;
+}
+
+/* Scroll Indicator */
+.scroll-text,
+.scroll-arrow {
+  color: #1a1a1a !important;
+}
+
+/* About Section */
+.about-main-heading,
+.about-heading-dark,
+.about-description,
+.about-trust-title,
+.about-card-title,
+.about-card-description {
+  color: #1a1a1a !important;
+}
+
+/* Navbar when not scrolled */
+.navbar-colorful:not(.navbar-scrolled) .nav-link-colorful,
+.navbar-colorful:not(.navbar-scrolled) .nav-login-btn {
+  color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+}
+
+.navbar-colorful:not(.navbar-scrolled) .nav-link-colorful:hover {
+  background: rgba(147, 51, 234, 0.1) !important;
+  color: #7c3aed !important;
+}
+
+/* Package cards - text inside white cards stays dark */
+.package-name,
+.package-description,
+.feature-text {
+  color: #333 !important;
+}
+
+/* AGGRESSIVE TEXT VISIBILITY FIX - ALL SECTIONS */
+
+/* Make sure ALL text elements are dark and visible */
+* {
+  color: #1a1a1a;
+}
+
+/* Headers specifically */
+.packages-main-heading,
+.packages-subtitle,
+.packages-badge-text,
+.package-name,
+.package-description,
+.package-price-label,
+.feature-text {
+  color: #1a1a1a !important;
+}
+
+/* Button text should be white */
+button,
+.package-button,
+.btn,
+.btn-primary,
+.btn-secondary {
+  color: white !important;
+}
+
+/* Badge text */
+.packages-badge-text,
+.section-label {
+  color: #7c3aed !important;
+}
+
+/* All heading variations */
+.main-heading,
+.section-title,
+.heading,
+.title {
+  color: #1a1a1a !important;
+}
+
+/* All paragraph and description variations */
+.subtitle,
+.description,
+.text,
+.content p {
+  color: #333 !important;
+}
+
+/* ==========================================
+   ULTRA-AGGRESSIVE TEXT VISIBILITY FIX
+   LAST RESORT - OVERRIDE EVERYTHING
+   ========================================== */
+
+/* Force ALL section headings and text to be COLORFUL */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  color: #6366f1 !important;
+  text-shadow: 0 2px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+section p,
+section span:not(.package-price):not(.btn):not(button span),
+section div:not(.package-price):not(.btn):not(button) {
+  color: #333 !important;
+}
+
+/* Specific components */
+.packages-section *:not(.package-price):not(button):not(.btn),
+.hiw-section *:not(button):not(.btn),
+.features-section *:not(button):not(.btn),
+.faq-section *:not(button):not(.btn),
+.about-section *:not(button):not(.btn):not(.about-orb-number) {
+  color: inherit;
+}
+
+/* Make sure main text elements are COLORFUL and visible */
+.packages-section h2,
+.packages-section h3,
+.packages-section p,
+.hiw-section h2,
+.hiw-section h3,
+.hiw-section p,
+.features-section h2,
+.features-section h3,
+.features-section p {
+  color: #8b5cf6 !important;
+  text-shadow: 0 2px 12px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Package card text specifically - COLORFUL */
+.package-card h3,
+.package-card p,
+.package-card .package-name,
+.package-card .package-description,
+.package-card .feature-text,
+.package-card .package-price-label {
+  color: #8b5cf6 !important;
+}
+
+/* Keep buttons white text */
+button *,
+.btn *,
+.package-button *,
+.nav-register-btn *,
+a.btn * {
+  color: white !important;
+}
+
+/* Badge text colorful */
+.badge-text,
+[class*="badge-text"] {
+  color: #7c3aed !important;
+}
+

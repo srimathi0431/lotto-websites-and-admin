@@ -1,0 +1,355 @@
+/* ==========================================
+   HOW IT WORKS - FLIP CARD SECTION
+   ========================================== */
+
+.how-it-works {
+  position: relative;
+  padding: 6rem 2rem;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Background Orbs */
+.hiw-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hiw-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  animation: float-orb 20s ease-in-out infinite;
+}
+
+.hiw-orb-1 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #3b82f6, #7c3aed);
+  top: -80px; left: -80px;
+}
+
+.hiw-orb-2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #ec4899, #f59e0b);
+  bottom: -120px; right: -120px;
+  animation-delay: 5s;
+}
+
+.hiw-orb-3 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, #10b981, #06b6d4);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(40px, -40px) scale(1.08); }
+  66%       { transform: translate(-30px, 30px) scale(0.95); }
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.how-it-works-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hiw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(168,85,247,0.15));
+  border: 2px solid rgba(59,130,246,0.3);
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.hiw-badge-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #60a5fa;
+  text-transform: uppercase;
+}
+
+.hiw-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #8b5cf6;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.hiw-gradient-text {
+  color: #d97706;
+  font-weight: 900;
+}
+
+.hiw-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   FLIP CARDS GRID
+   ========================================== */
+
+.hiw-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+/* Fixed height wrapper — box size never changes */
+.hiw-step {
+  height: 340px;
+  cursor: pointer;
+  perspective: 900px;
+}
+
+/* Flip container */
+.hiw-flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 18px;
+}
+
+.hiw-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Both faces — same position */
+.hiw-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.25rem 1.25rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ---- FRONT ---- */
+.hiw-front {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1.5px solid rgba(200, 200, 220, 0.5);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  gap: 0.6rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.hiw-step:hover .hiw-front {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+/* Number badge top-center */
+.hiw-number {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.hiw-icon-circle {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.03);
+}
+
+.hiw-icon-circle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.hiw-step-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.hiw-tap-hint {
+  font-size: 0.58rem;
+  color: #ccc;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ---- BACK ---- */
+.hiw-back {
+  transform: rotateY(180deg);
+  color: white;
+  gap: 0.65rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.hiw-back-num {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: white;
+}
+
+.hiw-back-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  margin: 0;
+}
+
+.hiw-back-desc {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.hiw-back-hint {
+  font-size: 0.56rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+/* Progress bar on back */
+.hiw-progress-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
+}
+
+.hiw-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: rgba(255,255,255,0.7);
+  animation: progressRun 5s linear forwards;
+}
+
+@keyframes progressRun {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* ==========================================
+   DOT INDICATORS
+   ========================================== */
+
+.hiw-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.75rem;
+}
+
+.hiw-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hiw-dot-active {
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (min-width: 1024px) {
+  .hiw-steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .hiw-step { height: 350px; }
+}
+
+@media (max-width: 768px) {
+  .how-it-works { padding: 3rem 1rem; }
+  .how-it-works-header { margin-bottom: 2rem; }
+  .hiw-badge { padding: 0.45rem 1rem; margin-bottom: 1rem; }
+  .hiw-badge-text { font-size: 0.56rem; }
+  .hiw-title { font-size: clamp(1.3rem, 5vw, 2rem); margin-bottom: 0.6rem; }
+  .hiw-subtitle { font-size: 0.76rem; }
+  .hiw-steps-grid { gap: 1rem; }
+  .hiw-step { height: 280px; }
+  .hiw-face { padding: 1.2rem 1rem 1rem; }
+  .hiw-icon-circle { width: 48px; height: 48px; }
+  .hiw-icon-circle svg { width: 22px; height: 22px; }
+  .hiw-step-title { font-size: 0.82rem; }
+  .hiw-back-title { font-size: 0.86rem; }
+  .hiw-back-desc { font-size: 0.68rem; }
+}
+
+@media (max-width: 480px) {
+  .how-it-works { padding: 2.5rem 0.75rem; }
+  .hiw-steps-grid { gap: 0.75rem; }
+  .hiw-step { height: 200px; }
+  .hiw-face { padding: 1rem 0.75rem; }
+  .hiw-icon-circle { width: 40px; height: 40px; }
+  .hiw-icon-circle svg { width: 20px; height: 20px; }
+  .hiw-step-title { font-size: 0.75rem; }
+  .hiw-back-desc { font-size: 0.62rem; }
+  .hiw-number { width: 24px; height: 24px; font-size: 0.72rem; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hiw-orb { animation: none; }
+  .hiw-flip-inner { transition: none; }
+}

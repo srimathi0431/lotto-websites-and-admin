@@ -1,0 +1,257 @@
+/* ==========================================
+   CSS 3D BALLS - REALISTIC LOTTERY BALLS
+   ========================================== */
+
+.css-3d-balls-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  pointer-events: none;
+  perspective: 1200px;
+}
+
+.css-3d-ball {
+  position: absolute;
+  transform-style: preserve-3d;
+  filter: none;
+}
+
+/* Ball sizes */
+.ball-large {
+  width: 170px;
+  height: 170px;
+}
+
+.ball-large-alt {
+  width: 150px;
+  height: 150px;
+}
+
+.ball-medium {
+  width: 110px;
+  height: 110px;
+}
+
+.ball-small {
+  width: 95px;
+  height: 95px;
+}
+
+/* Ball sphere with 3D effect - NO ANIMATION */
+.ball-sphere {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+/* Ball color gradients - Ultra realistic */
+.ball-purple .ball-sphere {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 15%),
+    radial-gradient(circle at 35% 35%, #e0d5ff 0%, #a78bfa 25%, #7c3aed 55%, #5b21b6 100%);
+}
+
+.ball-blue .ball-sphere {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 15%),
+    radial-gradient(circle at 35% 35%, #dbeafe 0%, #60a5fa 25%, #2563eb 55%, #1e40af 100%);
+}
+
+.ball-orange .ball-sphere {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 15%),
+    radial-gradient(circle at 35% 35%, #fed7aa 0%, #fb923c 25%, #f97316 55%, #ea580c 100%);
+}
+
+.ball-pink .ball-sphere {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 15%),
+    radial-gradient(circle at 35% 35%, #fce7f3 0%, #f472b6 25%, #ec4899 55%, #db2777 100%);
+}
+
+.ball-cyan .ball-sphere {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 15%),
+    radial-gradient(circle at 35% 35%, #cffafe 0%, #22d3ee 25%, #06b6d4 55%, #0891b2 100%);
+}
+
+.ball-dark .ball-sphere {
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 15%),
+    radial-gradient(circle at 35% 35%, #6b7280 0%, #374151 25%, #1f2937 55%, #111827 100%);
+}
+
+/* Top highlight shine */
+.ball-highlight-top {
+  position: absolute;
+  top: 12%;
+  left: 18%;
+  width: 45%;
+  height: 45%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.5) 35%,
+    transparent 70%
+  );
+  transform: translateZ(10px);
+}
+
+/* Inner shadow for depth */
+.ball-shadow-inner {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 60%
+  );
+  transform: translateZ(-5px);
+}
+
+/* Glossy shine effect */
+.ball-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.1) 40%,
+    transparent 60%
+  );
+  transform: translateZ(8px);
+}
+
+/* Number circle - white panel */
+.ball-number-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(15px);
+  width: 45%;
+  height: 45%;
+  background: 
+    radial-gradient(circle at 35% 35%, #ffffff 0%, #f8f9fa 60%, #e9ecef 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball-number {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #1f2937;
+  line-height: 1;
+  transform: translateZ(5px);
+}
+
+.ball-large .ball-number {
+  font-size: 3em;
+}
+
+.ball-large-alt .ball-number {
+  font-size: 2.7em;
+}
+
+.ball-medium .ball-number {
+  font-size: 2.3em;
+}
+
+.ball-small .ball-number {
+  font-size: 2em;
+}
+
+/* 3D Animation - Float and rotate - DISABLED */
+@keyframes ball-float-3d {
+  0%, 100% {
+    transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes ball-rotate-3d {
+  0%, 100% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+/* Responsive sizes */
+@media (max-width: 1200px) {
+  .ball-large {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .ball-large-alt {
+    width: 125px;
+    height: 125px;
+  }
+  
+  .ball-medium {
+    width: 95px;
+    height: 95px;
+  }
+  
+  .ball-small {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 968px) {
+  .ball-medium,
+  .ball-small {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .ball-large {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .ball-large-alt {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .css-3d-ball {
+    filter: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .ball-large,
+  .ball-large-alt {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .ball-number {
+    font-size: 1.8em;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .css-3d-ball,
+  .ball-sphere {
+    animation: none !important;
+  }
+}

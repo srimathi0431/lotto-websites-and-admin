@@ -1,0 +1,316 @@
+/* ==========================================
+   PRIZE DISTRIBUTION SECTION
+   ========================================== */
+
+.prize-section {
+  padding: 100px 0;
+  background: transparent;
+  position: relative;
+}
+
+.prize-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---- Header ---- */
+.prize-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.prize-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(236,72,153,0.15));
+  border: 1.5px solid rgba(245,158,11,0.4);
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #f59e0b;
+  margin-bottom: 20px;
+}
+
+.prize-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  color: #8b5cf6;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.prize-gradient-text {
+  background: linear-gradient(135deg, #f59e0b, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.prize-subheading {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ---- Allocation Cards Grid ---- */
+.prize-allocation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.prize-allocation-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(var(--card-color), 0.3);
+  border-color: color-mix(in srgb, var(--card-color) 30%, transparent);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.prize-allocation-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--card-color);
+  border-radius: 18px 18px 0 0;
+}
+
+.prize-allocation-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.prize-alloc-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.prize-alloc-rank {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.prize-alloc-pct {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.prize-alloc-bar-bg {
+  background: rgba(0,0,0,0.08);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.prize-alloc-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+/* ---- Table ---- */
+.prize-table-wrap {
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+  border: 2px solid rgba(139,92,246,0.15);
+  margin-bottom: 40px;
+}
+
+.prize-table-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #8b5cf6;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.prize-table-scroll {
+  overflow-x: auto;
+}
+
+.prize-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 600px;
+}
+
+.prize-table thead tr {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: white;
+}
+
+.prize-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.prize-table th:first-child {
+  border-radius: 12px 0 0 12px;
+}
+.prize-table th:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.prize-table td {
+  padding: 13px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  color: #374151;
+  font-weight: 500;
+}
+
+.prize-table tr:hover td {
+  background: rgba(139,92,246,0.04);
+}
+
+.row-highlight td {
+  background: rgba(245,158,11,0.06);
+}
+
+.td-gold {
+  font-weight: 700;
+  color: #d97706 !important;
+}
+
+.td-icon {
+  margin-right: 6px;
+}
+
+.td-pct {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.row-total td {
+  border-top: 2px solid rgba(139,92,246,0.2);
+  border-bottom: none;
+  background: rgba(139,92,246,0.05);
+  color: #8b5cf6;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* ---- Flexible 5% Note ---- */
+.prize-flex-note {
+  background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+  border: 2px solid rgba(6,182,212,0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.prize-flex-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #06b6d4;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.prize-flex-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.prize-flex-option {
+  background: rgba(255,255,255,0.8);
+  border-radius: 14px;
+  padding: 18px 28px;
+  min-width: 160px;
+}
+
+.prize-flex-option-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #8b5cf6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.prize-flex-option-detail {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.prize-flex-or {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ec4899;
+  background: rgba(236,72,153,0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .prize-allocation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .prize-table-wrap {
+    padding: 20px 16px;
+  }
+
+  .prize-flex-note {
+    padding: 22px 20px;
+  }
+
+  .prize-flex-options {
+    gap: 16px;
+  }
+
+  .prize-section {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .prize-allocation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .prize-alloc-pct {
+    font-size: 1.6rem;
+  }
+
+  .prize-allocation-card {
+    padding: 16px 12px;
+  }
+
+  .prize-container {
+    padding: 0 1rem;
+  }
+}

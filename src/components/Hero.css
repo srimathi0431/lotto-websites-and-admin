@@ -1,0 +1,1312 @@
+/* ==========================================
+   HERO SECTION - STATIC BACKGROUND
+   ========================================== */
+
+.hero-cinematic {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* ==========================================
+   STATIC BACKGROUND IMAGE
+   ========================================== */
+
+.hero-background-static {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image: url('../../public/image/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ==========================================
+   VIBRANT ANIMATED BACKGROUND
+   ========================================== */
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bg-gradient-layer-1 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #0284c7 0%,
+    #0ea5e9 8%,
+    #38bdf8 18%,
+    #7dd3fc 28%,
+    #e0f2fe 38%,
+    #fdf4ff 48%,
+    #fae8ff 58%,
+    #f5d0fe 68%,
+    #fbbf24 78%,
+    #fb923c 88%,
+    #fdba74 100%
+  );
+  animation: gradientShift1 20s ease-in-out infinite;
+}
+
+.bg-gradient-layer-2 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 48%,
+    rgba(251, 207, 232, 0.9) 0%,
+    rgba(252, 165, 165, 0.7) 10%,
+    rgba(251, 146, 60, 0.6) 20%,
+    rgba(253, 224, 71, 0.5) 30%,
+    transparent 55%
+  );
+  animation: gradientShift2 15s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.bg-gradient-layer-3 {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(
+      ellipse 900px 600px at 15% 35%,
+      rgba(147, 51, 234, 0.35) 0%,
+      rgba(168, 85, 247, 0.25) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 900px 600px at 85% 30%,
+      rgba(236, 72, 153, 0.35) 0%,
+      rgba(244, 114, 182, 0.25) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 20% 80%,
+      rgba(6, 182, 212, 0.3) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 80% 85%,
+      rgba(251, 146, 60, 0.3) 0%,
+      transparent 40%
+    );
+  animation: gradientShift3 18s ease-in-out infinite;
+}
+
+@keyframes gradientShift1 {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-20px); }
+}
+
+@keyframes gradientShift2 {
+  0%, 100% { opacity: 0.8; transform: rotate(0deg); }
+  50% { opacity: 1; transform: rotate(5deg); }
+}
+
+@keyframes gradientShift3 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+/* Remove old display:none rules */
+.lottery-balls-left,
+.lottery-balls-right,
+.ribbon {
+  display: none;
+}
+
+.bg-gradient-layer-1 {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    #0284c7 0%,
+    #0ea5e9 8%,
+    #38bdf8 18%,
+    #7dd3fc 28%,
+    #e0f2fe 38%,
+    #fdf4ff 48%,
+    #fae8ff 58%,
+    #f5d0fe 68%,
+    #fbbf24 78%,
+    #fb923c 88%,
+    #fdba74 100%
+  );
+  animation: gradientShift1 20s ease-in-out infinite;
+}
+
+.bg-gradient-layer-2 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 48%,
+    rgba(251, 207, 232, 0.9) 0%,
+    rgba(252, 165, 165, 0.7) 10%,
+    rgba(251, 146, 60, 0.6) 20%,
+    rgba(253, 224, 71, 0.5) 30%,
+    transparent 55%
+  );
+  animation: gradientShift2 15s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.bg-gradient-layer-3 {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(
+      ellipse 900px 600px at 15% 35%,
+      rgba(147, 51, 234, 0.35) 0%,
+      rgba(168, 85, 247, 0.25) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 900px 600px at 85% 30%,
+      rgba(236, 72, 153, 0.35) 0%,
+      rgba(244, 114, 182, 0.25) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 20% 80%,
+      rgba(6, 182, 212, 0.3) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 80% 85%,
+      rgba(251, 146, 60, 0.3) 0%,
+      transparent 40%
+    );
+  animation: gradientShift3 18s ease-in-out infinite;
+}
+
+@keyframes gradientShift1 {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-20px); }
+}
+
+@keyframes gradientShift2 {
+  0%, 100% { opacity: 0.8; transform: rotate(0deg); }
+  50% { opacity: 1; transform: rotate(5deg); }
+}
+
+@keyframes gradientShift3 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+/* Architectural Structures */
+.bg-structure {
+  position: absolute;
+  width: 200px;
+  height: 350px;
+  opacity: 0.15;
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.structure-left {
+  left: 8%;
+  top: 25%;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.4) 0%,
+    rgba(59, 130, 246, 0.3) 50%,
+    transparent 100%
+  );
+  transform: skewY(-5deg);
+  animation: structure-float-1 20s ease-in-out infinite;
+}
+
+.structure-right {
+  right: 8%;
+  top: 20%;
+  background: linear-gradient(
+    225deg,
+    rgba(236, 72, 153, 0.4) 0%,
+    rgba(217, 70, 239, 0.3) 50%,
+    transparent 100%
+  );
+  transform: skewY(5deg);
+  animation: structure-float-2 22s ease-in-out infinite;
+}
+
+@keyframes structure-float-1 {
+  0%, 100% { 
+    transform: skewY(-5deg) translateY(0);
+    opacity: 0.15;
+  }
+  50% { 
+    transform: skewY(-3deg) translateY(-20px);
+    opacity: 0.25;
+  }
+}
+
+@keyframes structure-float-2 {
+  0%, 100% { 
+    transform: skewY(5deg) translateY(0);
+    opacity: 0.15;
+  }
+  50% { 
+    transform: skewY(3deg) translateY(-15px);
+    opacity: 0.25;
+  }
+}
+
+/* ==========================================
+   GLOWING ORBS
+   ========================================== */
+
+.bg-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  animation: orb-float 12s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.6), transparent 70%);
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+  animation-duration: 14s;
+}
+
+.orb-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.5), transparent 70%);
+  top: 20%;
+  right: 20%;
+  animation-delay: 3s;
+  animation-duration: 16s;
+}
+
+.orb-3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.4), transparent 70%);
+  bottom: 10%;
+  left: 30%;
+  animation-delay: 6s;
+  animation-duration: 18s;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ==========================================
+   FLOATING PARTICLES
+   ========================================== */
+
+.bg-particles {
+  position: absolute;
+  inset: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  animation: particle-rise linear infinite;
+}
+
+@keyframes particle-rise {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   REFLECTIVE FLOOR
+   ========================================== */
+
+.reflective-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.15) 15%,
+    rgba(59, 130, 246, 0.25) 30%,
+    rgba(147, 51, 234, 0.3) 45%,
+    rgba(236, 72, 153, 0.25) 60%,
+    rgba(251, 146, 60, 0.35) 75%,
+    rgba(253, 224, 71, 0.25) 90%,
+    rgba(251, 191, 36, 0.3) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reflective-floor::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(236, 72, 153, 0.5) 15%,
+      rgba(217, 70, 239, 0.4) 25%,
+      rgba(59, 130, 246, 0.35) 40%,
+      rgba(6, 182, 212, 0.3) 50%,
+      rgba(251, 146, 60, 0.4) 65%,
+      rgba(251, 191, 36, 0.35) 80%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(255, 255, 255, 0.03) 80px,
+      transparent 160px
+    );
+  animation: light-trails 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.reflective-floor::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(236, 72, 153, 0.6) 20%,
+    rgba(139, 92, 246, 0.6) 40%,
+    rgba(59, 130, 246, 0.6) 60%,
+    rgba(251, 146, 60, 0.6) 80%,
+    transparent 100%
+  );
+  filter: blur(1px);
+  animation: horizon-glow 6s ease-in-out infinite;
+}
+
+@keyframes horizon-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes light-trails {
+  0%, 100% { opacity: 0.5; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(50px); }
+}
+
+/* ==========================================
+   LOTTERY BALLS - LEFT SIDE
+   ========================================== */
+
+.lottery-balls-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+  height: 80%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.lottery-balls-left .ball-large[data-number="7"] {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 170px;
+  height: 170px;
+  animation: ball-float-1 8s ease-in-out infinite;
+}
+
+.lottery-balls-left .ball-medium[data-number="5"] {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  width: 110px;
+  height: 110px;
+  animation: ball-float-2 10s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.lottery-balls-left .ball-small[data-number="3"] {
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+  width: 95px;
+  height: 95px;
+  animation: ball-float-3 9s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* ==========================================
+   LOTTERY BALLS - RIGHT SIDE
+   ========================================== */
+
+.lottery-balls-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+  height: 80%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.lottery-balls-right .ball-large[data-number="9"] {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 180px;
+  height: 180px;
+  animation: ball-float-4 9s ease-in-out infinite;
+}
+
+.lottery-balls-right .ball-medium[data-number="1"] {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  animation: ball-float-5 10s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.lottery-balls-right .ball-large[data-number="8"] {
+  position: absolute;
+  bottom: 5%;
+  right: 0%;
+  width: 150px;
+  height: 150px;
+  animation: ball-float-6 11s ease-in-out infinite;
+  animation-delay: 2.5s;
+}
+
+/* ==========================================
+   LOTTERY BALL STRUCTURE
+   ========================================== */
+
+.lottery-ball {
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ball-purple {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #e0d5ff 0%,
+    #a78bfa 20%,
+    #7c3aed 50%,
+    #5b21b6 100%
+  );
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.4),
+    inset 15px 15px 30px rgba(255, 255, 255, 0.4),
+    0 25px 60px rgba(124, 58, 237, 0.5);
+}
+
+.ball-blue {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #dbeafe 0%,
+    #60a5fa 20%,
+    #2563eb 50%,
+    #1e40af 100%
+  );
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.4),
+    inset 15px 15px 30px rgba(255, 255, 255, 0.4),
+    0 25px 60px rgba(37, 99, 235, 0.5);
+}
+
+.ball-orange {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #fed7aa 0%,
+    #fb923c 20%,
+    #f97316 50%,
+    #ea580c 100%
+  );
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.4),
+    inset 15px 15px 30px rgba(255, 255, 255, 0.4),
+    0 25px 60px rgba(249, 115, 22, 0.5);
+}
+
+.ball-pink {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #fce7f3 0%,
+    #f472b6 20%,
+    #ec4899 50%,
+    #db2777 100%
+  );
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.4),
+    inset 15px 15px 30px rgba(255, 255, 255, 0.4),
+    0 25px 60px rgba(236, 72, 153, 0.6);
+}
+
+.ball-cyan {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #cffafe 0%,
+    #22d3ee 20%,
+    #06b6d4 50%,
+    #0891b2 100%
+  );
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.4),
+    inset 15px 15px 30px rgba(255, 255, 255, 0.4),
+    0 25px 60px rgba(6, 182, 212, 0.5);
+}
+
+.ball-dark {
+  background: radial-gradient(
+    circle at 35% 35%,
+    #6b7280 0%,
+    #374151 20%,
+    #1f2937 50%,
+    #111827 100%
+  );
+  box-shadow: 
+    inset -10px -10px 30px rgba(0, 0, 0, 0.5),
+    inset 15px 15px 30px rgba(255, 255, 255, 0.2),
+    0 25px 60px rgba(17, 24, 39, 0.7);
+}
+
+.ball-highlight {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, transparent 70%);
+  filter: blur(8px);
+}
+
+.ball-number-panel {
+  position: relative;
+  width: 45%;
+  height: 45%;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.ball-number {
+  font-family: var(--font-heading);
+  font-size: 2.2em;
+  font-weight: 900;
+  color: #1f2937;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.ball-large .ball-number {
+  font-size: 2.8em;
+}
+
+.ball-medium .ball-number {
+  font-size: 2.3em;
+}
+
+.ball-small .ball-number {
+  font-size: 1.9em;
+}
+
+/* ==========================================
+   DECORATIVE SPHERES
+   ========================================== */
+
+.decorative-sphere {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.8), rgba(200, 200, 255, 0.4));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sphere-1 {
+  width: 45px;
+  height: 45px;
+  top: 30%;
+  left: 40%;
+  animation: sphere-float-1 7s ease-in-out infinite;
+}
+
+.sphere-2 {
+  width: 30px;
+  height: 30px;
+  bottom: 40%;
+  left: 15%;
+  animation: sphere-float-2 8s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.sphere-3 {
+  width: 38px;
+  height: 38px;
+  top: 40%;
+  right: 25%;
+  animation: sphere-float-3 9s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.sphere-4 {
+  width: 35px;
+  height: 35px;
+  bottom: 35%;
+  right: 10%;
+  animation: sphere-float-4 7.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes ball-float-1 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-25px) translateX(15px); }
+}
+
+@keyframes ball-float-2 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(-10px); }
+}
+
+@keyframes ball-float-3 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-18px) translateX(12px); }
+}
+
+@keyframes ball-float-4 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-22px) translateX(-15px); }
+}
+
+@keyframes ball-float-5 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(10px); }
+}
+
+@keyframes ball-float-6 {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-24px) translateX(-12px); }
+}
+
+@keyframes sphere-float-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes sphere-float-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes sphere-float-3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes sphere-float-4 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ==========================================
+   COLORED RIBBONS
+   ========================================== */
+
+.ribbon {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.4;
+  z-index: 2;
+  pointer-events: none;
+  animation: ribbon-flow 15s ease-in-out infinite;
+}
+
+.ribbon-pink {
+  background: linear-gradient(90deg, transparent, rgba(236, 72, 153, 0.6), transparent);
+  top: 20%;
+  left: 5%;
+  transform: rotate(-25deg);
+  animation-delay: 0s;
+}
+
+.ribbon-cyan {
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.6), transparent);
+  top: 35%;
+  right: 10%;
+  transform: rotate(20deg);
+  animation-delay: 2s;
+}
+
+.ribbon-orange {
+  background: linear-gradient(90deg, transparent, rgba(251, 146, 60, 0.6), transparent);
+  bottom: 25%;
+  left: 8%;
+  transform: rotate(15deg);
+  animation-delay: 4s;
+}
+
+.ribbon-purple {
+  background: linear-gradient(90deg, transparent, rgba(147, 51, 234, 0.6), transparent);
+  bottom: 20%;
+  right: 5%;
+  transform: rotate(-30deg);
+  animation-delay: 3s;
+}
+
+@keyframes ribbon-flow {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: translateY(0) rotate(var(--ribbon-rotation, 0deg));
+  }
+  50% { 
+    opacity: 0.6;
+    transform: translateY(-20px) rotate(calc(var(--ribbon-rotation, 0deg) + 10deg));
+  }
+}
+
+.ribbon-pink { --ribbon-rotation: -25deg; }
+.ribbon-cyan { --ribbon-rotation: 20deg; }
+.ribbon-orange { --ribbon-rotation: 15deg; }
+.ribbon-purple { --ribbon-rotation: -30deg; }
+
+/* Main content should be above the background */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 1000px;
+  padding: 2rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
+.hero-logo-container {
+  margin-bottom: 1rem;
+}
+
+/* Remove logo animation */
+@keyframes logoReveal {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo-infinity-symbol {
+  width: 110px;
+  height: 55px;
+  margin: 0 auto 0.75rem;
+  filter: drop-shadow(0 8px 24px rgba(236, 72, 153, 0.5));
+}
+
+/* Remove glow animation */
+@keyframes infinity-glow {
+  0%, 100% {
+    filter: drop-shadow(0 8px 24px rgba(236, 72, 153, 0.5));
+  }
+}
+
+.infinity-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.infinity-path {
+  transform-origin: center;
+}
+
+/* Remove rotation animation */
+@keyframes infinity-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(0deg); }
+}
+
+.hero-logo-text {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.logo-lotto {
+  color: #1a1a1a;
+  font-weight: 900;
+  text-shadow: 
+    2px 2px 0px rgba(124, 58, 237, 0.3),
+    4px 4px 8px rgba(124, 58, 237, 0.2);
+}
+
+.logo-link {
+  color: #1a1a1a;
+  font-weight: 900;
+  text-shadow: 
+    2px 2px 0px rgba(236, 72, 153, 0.3),
+    4px 4px 8px rgba(236, 72, 153, 0.2);
+}
+
+/* Remove gradient animation */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+}
+
+/* ==========================================
+   HEADLINE
+   ========================================== */
+
+.hero-headline {
+  margin: 1.25rem 0 1rem;
+}
+
+/* Remove headline animation */
+@keyframes headlineReveal {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headline-line-1,
+.headline-line-2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.headline-line-1 {
+  color: #1e3a8a;
+  text-shadow: 
+    0 2px 10px rgba(30, 58, 138, 0.3),
+    0 4px 20px rgba(255, 255, 255, 0.5);
+  font-weight: 800;
+}
+
+.headline-line-2 {
+  background: linear-gradient(
+    135deg,
+    #dc2626 0%,
+    #ea580c 25%,
+    #d97706 50%,
+    #ca8a04 75%,
+    #dc2626 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  filter: drop-shadow(0 4px 12px rgba(220, 38, 38, 0.5)) drop-shadow(0 2px 8px rgba(234, 88, 12, 0.4));
+  font-weight: 900;
+}
+
+/* ==========================================
+   TAGLINE
+   ========================================== */
+
+.hero-tagline {
+  font-size: clamp(0.875rem, 1.75vw, 1.05rem);
+  font-weight: 500;
+  color: #4c1d95;
+  margin: 1rem 0 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+/* Remove tagline animation */
+@keyframes taglineReveal {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tagline-dot {
+  color: #ec4899;
+  font-size: 1.5em;
+}
+
+/* ==========================================
+   CTA BUTTONS
+   ========================================== */
+
+.hero-cta-buttons {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Remove CTA animation */
+@keyframes ctaReveal {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.cta-primary {
+  background: linear-gradient(
+    135deg,
+    #fbbf24 0%,
+    #f97316 25%,
+    #ec4899 50%,
+    #a855f7 100%
+  );
+  color: white;
+  box-shadow: 0 6px 24px rgba(236, 72, 153, 0.35);
+}
+
+.cta-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.45);
+}
+
+.cta-primary:hover::before {
+  opacity: 1;
+}
+
+.cta-secondary {
+  background: #1e293b;
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-secondary:hover {
+  transform: translateY(-2px);
+  background: #0f172a;
+  border-color: #f0f0f0;
+  box-shadow: 0 8px 28px rgba(30, 41, 59, 0.5);
+}
+
+.btn-icon-left,
+.btn-icon-right {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn:hover .btn-icon-right {
+  transform: translateX(4px);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================
+   SCROLL INDICATOR - REMOVED
+   ========================================== */
+
+.scroll-indicator {
+  display: none;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1200px) {
+  .lottery-balls-left,
+  .lottery-balls-right {
+    width: 20%;
+  }
+  
+  .lottery-balls-left .ball-large[data-number="7"] {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .lottery-balls-right .ball-large[data-number="9"] {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .lottery-balls-right .ball-large[data-number="8"] {
+    width: 125px;
+    height: 125px;
+  }
+  
+  .lottery-balls-left .ball-medium,
+  .lottery-balls-right .ball-medium {
+    width: 95px;
+    height: 95px;
+  }
+  
+  .lottery-balls-left .ball-small {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .bg-structure {
+    width: 160px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 968px) {
+  .lottery-balls-left .ball-medium,
+  .lottery-balls-right .ball-medium {
+    display: none;
+  }
+  
+  .lottery-balls-left .ball-small {
+    display: none;
+  }
+  
+  .decorative-sphere {
+    display: none;
+  }
+  
+  .ribbon {
+    opacity: 0.2;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE OPTIMIZED
+   ========================================== */
+
+@media (max-width: 768px) {
+  .hero-cinematic {
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  .hero-background-static {
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .hero-content {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-logo-text {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    gap: 0.3rem;
+  }
+  
+  .logo-infinity-symbol {
+    width: 75px;
+    height: 38px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .headline-line-1,
+  .headline-line-2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.2;
+  }
+  
+  .hero-tagline {
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    margin: 0.75rem 0 1.5rem;
+  }
+  
+  .hero-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0.75rem;
+  }
+  
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-icon-left,
+  .btn-icon-right {
+    width: 18px;
+    height: 18px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cinematic {
+    padding: 0.5rem;
+  }
+
+  .hero-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .hero-logo-text {
+    font-size: clamp(1.75rem, 7vw, 2rem);
+  }
+
+  .logo-infinity-symbol {
+    width: 65px;
+    height: 32px;
+  }
+  
+  .headline-line-1,
+  .headline-line-2 {
+    font-size: clamp(1.25rem, 5.5vw, 1.75rem);
+  }
+
+  .hero-tagline {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .tagline-dot {
+    display: none;
+  }
+
+  .cta-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-icon-left {
+    display: none;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION SUPPORT
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .lottery-ball,
+  .decorative-sphere,
+  .ribbon,
+  .particle {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,192 @@
+/* ==========================================
+   DARK ANIMATED BACKGROUND
+   ========================================== */
+
+.dark-animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-background);
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--color-dark-navy);
+}
+
+/* ==========================================
+   AMBIENT PURPLE/BLUE LIGHT ORBS
+   ========================================== */
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  animation: orb-float 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+.orb-purple-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--color-electric-purple) 0%, transparent 70%);
+  top: -200px;
+  left: -100px;
+  animation-duration: 25s;
+  animation-delay: 0s;
+}
+
+.orb-purple-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--color-royal-purple) 0%, transparent 70%);
+  bottom: -150px;
+  right: -100px;
+  animation-duration: 30s;
+  animation-delay: 5s;
+}
+
+.orb-blue-1 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--color-bright-blue) 0%, transparent 70%);
+  top: 30%;
+  right: -200px;
+  animation-duration: 28s;
+  animation-delay: 3s;
+}
+
+.orb-blue-2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, var(--color-neon-blue) 0%, transparent 70%);
+  bottom: 20%;
+  left: 15%;
+  animation-duration: 22s;
+  animation-delay: 8s;
+}
+
+.orb-purple-3 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #B747FF 0%, transparent 70%);
+  top: 50%;
+  left: 40%;
+  animation-duration: 26s;
+  animation-delay: 2s;
+  opacity: 0.3;
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -50px) scale(1.05);
+  }
+  66% {
+    transform: translate(-30px, 40px) scale(0.95);
+  }
+}
+
+/* ==========================================
+   FLOATING PARTICLES
+   ========================================== */
+
+.particles-container-dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.dark-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(167, 191, 255, 0.6);
+  box-shadow: 0 0 10px rgba(167, 191, 255, 0.8);
+  animation: particle-float-dark 25s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes particle-float-dark {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(60px);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   PURPLE GLOW LAYER
+   ========================================== */
+
+.purple-glow-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 30%, rgba(104, 27, 250, 0.15) 0%, transparent 60%);
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* ==========================================
+   PERFORMANCE OPTIMIZATIONS
+   ========================================== */
+
+@media (max-width: 768px) {
+  .ambient-orb {
+    filter: blur(80px);
+    opacity: 0.3;
+  }
+  
+  .orb-purple-1,
+  .orb-purple-2,
+  .orb-blue-1,
+  .orb-blue-2,
+  .orb-purple-3 {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .dark-particle {
+    display: none;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION SUPPORT
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb,
+  .dark-particle,
+  .purple-glow-layer {
+    animation: none !important;
+  }
+  
+  .ambient-orb {
+    opacity: 0.2;
+  }
+}

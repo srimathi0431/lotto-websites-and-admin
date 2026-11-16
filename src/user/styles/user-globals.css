@@ -1,0 +1,169 @@
+/* ===================================
+   USER PANEL - GLOBAL STYLES
+   Colorful & Modern Design
+   =================================== */
+
+:root {
+  /* === User Panel Colors === */
+  --user-primary: #6366F1;
+  --user-secondary: #8B5CF6;
+  --user-success: #10B981;
+  --user-warning: #F59E0B;
+  --user-danger: #EF4444;
+  --user-info: #06B6D4;
+  
+  /* === Gradient Colors === */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --gradient-warning: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-blue: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-purple: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  
+  /* === User Background === */
+  --user-bg: #F8F9FA;
+  --user-card-bg: #FFFFFF;
+  --user-sidebar-bg: #1E293B;
+  
+  /* === User Text === */
+  --user-text-primary: #1F2937;
+  --user-text-secondary: #6B7280;
+  --user-text-light: #9CA3AF;
+}
+
+/* === User Panel Base === */
+.user-panel {
+  min-height: 100vh;
+  background: var(--user-bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* === Colorful Cards === */
+.user-card {
+  background: var(--user-card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* === Gradient Cards === */
+.gradient-card {
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+}
+
+/* === User Buttons === */
+.user-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.user-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.4);
+}
+
+.user-btn-success {
+  background: var(--gradient-success);
+  color: white;
+}
+
+.user-btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.4);
+}
+
+/* === Wallet Balance Card === */
+.wallet-card {
+  background: var(--gradient-blue);
+  color: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 12px 24px rgba(79, 172, 254, 0.3);
+}
+
+/* === Status Badges === */
+.user-badge {
+  padding: 0.375rem 0.875rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.user-badge-success {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.user-badge-warning {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.user-badge-danger {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.user-badge-info {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* === Mobile Responsive === */
+@media (max-width: 768px) {
+  .user-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  .wallet-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .user-btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+}

@@ -1,0 +1,491 @@
+/* ==========================================
+   CTA SECTION - VIBRANT GRADIENT DESIGN
+   ========================================== */
+
+.cta {
+  padding: 50px 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================
+   CTA TWO-COLUMN LAYOUT - FORM + CONTENT
+   ========================================== */
+
+.cta-two-column {
+  position: relative;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+  padding: 30px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  box-shadow: 0 20px 50px rgba(240, 147, 251, 0.35);
+  overflow: hidden;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+.cta-two-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 65px rgba(240, 147, 251, 0.45);
+}
+
+/* LEFT SIDE - FORM */
+.cta-form-container {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  position: relative;
+  z-index: 2;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-form-container h3 {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f5576c, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px 14px;
+  font-size: 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #f5576c;
+  box-shadow: 0 0 0 3px rgba(245, 87, 108, 0.12);
+  transform: translateY(-1px);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.form-submit-btn {
+  margin-top: 6px;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 87, 108, 0.45);
+}
+
+/* RIGHT SIDE - CTA CONTENT */
+.cta-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+}
+
+.cta-text h2 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: white;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-text h2 .text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #caffbf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.96);
+  margin-bottom: 22px;
+}
+
+/* ==========================================
+   CTA BUTTONS - CLEAN DESIGN
+   ========================================== */
+
+.cta-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.btn-large {
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.cta-buttons .btn-outline {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.cta-buttons .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
+}
+
+.cta-buttons .btn-secondary {
+  background: #1e293b;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: #0f172a;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(30, 41, 59, 0.6);
+}
+
+
+/* ==========================================
+   CTA FEATURES - SIMPLE BULLET DOTS
+   ========================================== */
+
+.cta-features {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.cta-feature-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================
+   GRADIENT BLOBS - ANIMATED BACKGROUND
+   ========================================== */
+
+.cta-gradient-blob {
+  position: absolute;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: cta-blob-float 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #06fef9, #caffbf);
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(135deg, #fb5607, #ff7c51);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 5s;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  top: 50%;
+  right: -100px;
+  animation-delay: 10s;
+}
+
+@keyframes cta-blob-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1) rotate(120deg);
+    border-radius: 50% 50% 60% 40% / 60% 30% 70% 40%;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95) rotate(240deg);
+    border-radius: 30% 70% 50% 50% / 50% 60% 40% 60%;
+  }
+}
+
+/* ==========================================
+   FLOATING PARTICLES - ENHANCED
+   ========================================== */
+
+.cta-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: cta-particle-float 12s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.particle-1 {
+  width: 24px;
+  height: 24px;
+  top: 15%;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  width: 18px;
+  height: 18px;
+  top: 65%;
+  left: 85%;
+  animation-delay: 3s;
+}
+
+.particle-3 {
+  width: 30px;
+  height: 30px;
+  bottom: 25%;
+  right: 12%;
+  animation-delay: 6s;
+}
+
+.particle-4 {
+  width: 22px;
+  height: 22px;
+  top: 35%;
+  right: 22%;
+  animation-delay: 9s;
+}
+
+@keyframes cta-particle-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .cta-two-column {
+    padding: 28px;
+    gap: 28px;
+  }
+
+  .cta-text h2 {
+    font-size: 30px;
+  }
+
+  .cta-text p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 40px 0;
+  }
+
+  .cta-two-column {
+    padding: 20px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-form-container {
+    padding: 18px;
+  }
+
+  .cta-form-container h3 {
+    font-size: 18px;
+  }
+
+  .form-subtitle {
+    font-size: 11px;
+  }
+
+  .cta-form {
+    gap: 10px;
+  }
+
+  .form-group label {
+    font-size: 9px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .form-submit-btn {
+    padding: 9px 14px;
+    font-size: 11px;
+  }
+
+  .cta-content-right {
+    padding: 8px;
+  }
+
+  .cta-text h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .cta-text p {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .cta-buttons {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .btn-large {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .cta-features {
+    gap: 16px;
+  }
+
+  .cta-feature {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .cta-feature-dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-two-column {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .cta-form-container {
+    padding: 14px;
+  }
+
+  .cta-form-container h3 {
+    font-size: 15px;
+  }
+
+  .cta-text h2 {
+    font-size: 17px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-gradient-blob,
+  .cta-particle {
+    animation: none;
+  }
+
+  .cta-content,
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-outline {
+    transition: none;
+  }
+}

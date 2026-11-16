@@ -1,0 +1,140 @@
+/* ==========================================
+   SHARED 3D SECTION STYLES
+   ========================================== */
+
+/* Section Containers */
+.section-3d {
+  padding: var(--spacing-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 3D Section Headers */
+.section-header-3d {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto var(--spacing-3xl);
+}
+
+.section-badge-3d {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(124, 58, 237, 0.2);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  color: var(--color-vibrant-violet);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-3d-sm);
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.section-title-3d {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.section-description-3d {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+/* 3D Card Styles */
+.card-3d {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-2xl);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-3d-md);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.card-3d:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-3d-xl);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 3D Button Styles */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 1rem 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-3d-md);
+}
+
+.btn-3d-primary {
+  background: var(--gradient-cosmic);
+  color: white;
+}
+
+.btn-3d-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-vibrant-violet);
+  border: 2px solid rgba(124, 58, 237, 0.3);
+}
+
+.btn-3d:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3d-lg);
+}
+
+/* Gradient Text */
+.text-gradient-cosmic {
+  background: var(--gradient-cosmic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-ocean {
+  background: var(--gradient-ocean);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sunset {
+  background: var(--gradient-sunset);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Panel */
+.glass-panel-3d {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(30px) saturate(180%);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-3d-lg);
+}
+
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
